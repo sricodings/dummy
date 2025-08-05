@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exam Results - Kamaraj College</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #002f6c;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .nav-bar {
+      display: flex;
+      background-color: #003366;
+      padding: 10px;
+    }
+    .nav-bar a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .nav-bar a.active {
+      background-color: #ffc107;
+      color: #000;
+    }
+    .container {
+      text-align: center;
+      margin: 30px;
+    }
+    .logo {
+      margin: 20px 0;
+    }
+    input[type="text"],
+    input[type="date"] {
+      padding: 10px;
+      margin: 10px;
+      width: 250px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 30px;
+      background-color: #ffc107;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    h2 {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KAMARAJ COLLEGE OF ENGINEERING & TECHNOLOGY</h1>
+  </header>
+
+  <div class="nav-bar">
+    <a class="active" href="#">Admission</a>
+    <a href="#">Anna University Affiliation</a>
+    <a href="#">AICTE</a>
+    <a href="#">Mandatory Disclosure</a>
+  </div>
+
+  <div class="container">
+    <h2>Results - VIII Semester UG (R2021), IV Semester PG (R2020) - April 2025</h2>
+    <div class="logo">
+      <img src="/12345.jpg" alt="Kamaraj Logo" width="400" />
+    </div>
+    <h3>Examination Results</h3>
+    <form onsubmit="return checkRegisterNumber(event)">
+        <input type="text" id="regNumber" placeholder="Register Number" required /><br />
+        <input type="text" placeholder="YYYY-MM-DD"required /><br />
+        <button type="submit">VIEW RESULT</button>
+      </form>
+      
+      <script>
+        function checkRegisterNumber(event) {
+          event.preventDefault(); // prevent form submission
+          const regNum = document.getElementById("regNumber").value;
+          if (regNum === "920422104021") {
+            window.location.href = "result.html";
+          } else {
+            alert("No result found for this register number.");
+          }
+        }
+      </script>
+      
+  </div>
+</body>
+</html>
